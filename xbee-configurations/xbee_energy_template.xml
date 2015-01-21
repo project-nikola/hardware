@@ -37,8 +37,8 @@
       <setting command="D7">1</setting>
       <setting command="D6">0</setting>
       <setting command="D5">1</setting>
-      <setting command="D4">0</setting>
-      <setting command="D3">2</setting>
+      <setting command="D4">2</setting>
+      <setting command="D3">0</setting>
       <setting command="D2">0</setting>
       <setting command="D1">0</setting>
       <setting command="D0">2</setting>
