@@ -31,11 +31,9 @@ First, verify that the wireless adapter works. You can do this by running `sudo 
 
 ### Configure WPA Supplicant
 [Complete the WPA Supplicant configuration here](http://www.raspberrypi.org/documentation/installation/installing-images/).
+Refer to `wpa_supplicant.conf` in this repo as a reference.
 
 ### Configure Network Interfaces
-Your `/etc/network/interfaces` file should look like this:
-```
-INSERT DETAILS HERE
-```
+Your `/etc/network/interfaces` file should look like the one in this repo.
 
 Reboot your Raspberry Pi (`sudo reboot`) and it should automatically connect to the network!
