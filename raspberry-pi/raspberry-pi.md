@@ -65,8 +65,8 @@ First, verify that the wireless adapter works. You can do this by running `sudo
 iwlist wlan0 scan`, which will list all available Wifi networks.
 
 ### Configure WPA Supplicant
-[Complete the WPA Supplicant configuration
-here](http://www.raspberrypi.org/documentation/installation/installing-images/).
+**NOTICE:** I can't seem to get the `/etc/network/interfaces` file to read this correctly,
+so until further notice, I don't think the `wpa_supplicant.conf` file matters.
 Refer to `wpa_supplicant.conf` in this repo as a reference.
 
 ### Configure Network Interfaces
@@ -83,3 +83,12 @@ Raspberry Pi:
 sudo apt-get update
 sudo apt-get upgrade
 ```
+
+### Deploying with Git
+It's much easier to develop on my personal computer and to deploy to a Raspberry Pi
+than it is to maintain two separate Git repos and have to manually merge them together
+every time one makes a change. To that end, I have started deploying projects to the
+Raspberry Pi so that all modifications are made on my local computer (instead of making
+some changes on local and some on the Raspberry Pi). [See this helpful Digital Ocean
+article](https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps)
+for more information on how to set up deployment via git.
