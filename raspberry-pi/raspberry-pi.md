@@ -3,7 +3,7 @@ We use Raspberry Pi's as low-cost servers to run our various software.
 
 
 ## Installing Raspbian
-We use Raspbian as our operating system of choice. It is the most popular
+We chose Raspbian as our operating system because it is the most popular
 distribution for Raspberry Pi and has the most support online.
 
 ### Download Raspian
@@ -36,6 +36,22 @@ the power to the Raspberry Pi, you should see various console output appear on
 screen. After a minute or two, you should see a configuration screen. Follow
 the on screen instructions and you will have successfully installed Raspian on
 your Raspberry Pi!
+
+
+## First Steps
+The following steps comes from [this blog post by
+phoet](http://nofail.de/2013/01/pulling-strings-on-raspberry-pi/)
+> After the PI has booted from the provided Image on the SD-Card, it is
+> accessible through SSH:
+```
+ssh pi@10.0.1.2
+```
+> It’s a good idea to copy the SSH public key to the machine, so that you do
+> not have to type in the passphrase everytime:
+```
+ssh pi@10.0.1.2 "mkdir -p .ssh"
+scp ~/.ssh/id_dsa.pub pi@10.0.1.2:.ssh/authorized_keys
+```
 
 
 ## Configuring the Wifi
