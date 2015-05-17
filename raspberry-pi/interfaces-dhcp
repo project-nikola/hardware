@@ -2,16 +2,10 @@
 auto lo
 
 iface lo inet loopback
-iface eth0 inet static
-address AAA.AAA.A.AA
-netmask 255.255.255.0
-gateway BBB.BBB.B.BB
+iface eth0 inet dhcp
 
 auto wlan0
 allow-hotplug wlan0
 iface wlan0 inet static
-address AAA.AAA.A.AA
-netmask 255.255.255.0
-gateway BBB.BBB.B.BB
 wpa-ssid "CCCCCCCCCCC"
 wpa-psk "DDDDDDDDDDD"

@@ -64,13 +64,30 @@ connect to your wireless network automatically on startup.
 First, verify that the wireless adapter works. You can do this by running `sudo
 iwlist wlan0 scan`, which will list all available Wifi networks.
 
-### Configure WPA Supplicant
-**NOTICE:** I can't seem to get the `/etc/network/interfaces` file to read this correctly,
-so until further notice, I don't think the `wpa_supplicant.conf` file matters.
-Refer to `wpa_supplicant.conf` in this repo as a reference.
-
 ### Configure Network Interfaces
-Your `/etc/network/interfaces` file should look like the one in this repo.
+There are two different `interfaces` files in this directory. One called
+`interfaces` and one called `interfaces-dhcp`. The first one assigns a static
+IP address to the Raspberry Pi so that other computers can consistently connect
+to it. This is how our Raspberry Pis are configured and we think this is a
+sensible option. If you prefer to use dynamic IP addresses, you can skip the
+following subsection and continue reading from [Configuring WiFi
+credentials](#configuring-wifi-credentials).
+
+#### Configuring Static IP addresses
+Refer to [this
+article](http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address).
+You need to replace two variables with the values found in that blog post:
+- `AAA.AAA.A.AA` refers to the IP address you want use for your Raspberry Pi.
+- `BBB.BBB.B.BB` refers to the IP address of your router
+
+After finding these two variables, replace them with the values you found from
+the blog post on lines 6, 8, 13, 15.
+
+#### Configuring WiFi Credentials
+In either `interfaces` or `interfaces-dhcp`, you need to change lines 16 and 17
+to the name of the WiFi network you want to connect to and its password,
+respectively. If you decide to use `interfaces-dhcp`, then rename this to
+`interfaces` when you use this file on your Raspberry Pi.
 
 Reboot your Raspberry Pi (`sudo reboot`) and it should automatically connect to
 the network!
