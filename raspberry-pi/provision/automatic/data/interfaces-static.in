@@ -1,0 +1,23 @@
+# /etc/network/interfaces
+auto lo
+iface lo inet loopback
+
+auto eth0
+allow-hotplug eth0
+iface eth0 inet static
+address $address
+netmask $netmask
+network $network
+broadcast $broadcast
+gateway $gateway
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet static
+address $address
+netmask $netmask
+network $network
+broadcast $broadcast
+gateway $gateway
+wpa-ssid $ssid
+wpa-psk $psk

@@ -2,5 +2,5 @@
 *.pyc
 .venv
 
-raspberry-pi/provision/config.json
-raspberry-pi/provision/interfaces
+config.json
+*.img

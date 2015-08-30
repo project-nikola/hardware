@@ -1,0 +1,6 @@
+{
+  "address": "AAA.AA.A.AA",
+  "gateway": "BBB.BBB.B.BB",
+  "ssid": "WIFI_SSID",
+  "psk": "WIFI_PASSWORD"
+}
