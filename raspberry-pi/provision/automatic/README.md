@@ -7,6 +7,7 @@ never bothers you again.
 ```
 
 The script does the following:
+
 1. Configure static IP address
 2. Enable SSH Public Key usage
 3. Update + install dev tools
